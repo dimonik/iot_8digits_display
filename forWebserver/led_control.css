@@ -1,0 +1,9 @@
+h1 {
+	color: rgb(49, 151, 116); /* text color */
+}
+
+.textbox {
+    border-style: solid;
+    border-width: 1px;
+    width: 50%;
+}

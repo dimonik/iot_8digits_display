@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Raspberry LED control</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="led_control.js"></script>
+    <link rel="stylesheet" type="text/css" href="led_control.css" />
+</head>
+
+<body>
+    <h1>Raspberry LED control v1.0</h1>
+    </br>
+    Web Socket
+    <button onclick="opensocket();">Connect</button>
+    <button onclick="closesocket();">Disconnect</button>
+    </br>
+    </br>
+    </br>
+    <!-- 
+                LED
+                <button onclick="postmsg('on');return false">Turn ON&nbsp;</button><button onclick="postmsg('off');return false">Turn OFF</button>
+                </br>
+                </br>
+                </br>
+    -->
+    <!-- form to send messages -->
+    <form name="publish" onsubmit="formPublish();return false;">
+        <p>Type number:</p>
+        <input type="text" name="message" size="20" value="">
+        <input type="submit" value="Send">
+    </form>
+    </br>
+    <!-- incoming messages -->
+    <p>Server answer:</p>
+    <div class="textbox" id="subscribe"></div>
+    </br>
+    </br>
+    </br>
+    <p>LOG:</p>
+    <div class="textbox" id="serverlog"></div>
+</body>
+
+</html>
